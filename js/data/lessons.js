@@ -13,15 +13,45 @@ const COURSE_DATA = {
           id: "m1-l1",
           title: "Olá, Mundo!",
           theory: `<h2>Primeiro Programa em Python</h2>
-<p>Python é uma das linguagens mais populares do mundo. Vamos começar com o clássico "Olá, Mundo!"</p>
-<p>A função <code>print()</code> serve para exibir texto na tela:</p>
-<pre>print("Olá, Mundo!")</pre>
-<p>Alguns pontos importantes:</p>
+
+<h3>🐍 O que é Python?</h3>
+<p>Python é como um <strong>"tradutor universal"</strong> — você fala em linguagem humana e ele entende e executa! É uma das linguagens mais populares do mundo por ser <strong>fácil de ler e escrever</strong>.</p>
+
+<h3>💡 Analogia: Python como "receita de bolo"</h3>
+<p>Pense em um programa Python como uma <strong>receita de bolo</strong>:</p>
 <ul>
-<li>Todo comando <code>print</code> precisa de parênteses</li>
-<li>Textos vão entre aspas (<code>"</code> ou <code>'</code>)</li>
-<li>Python diferencia maiúsculas de minúsculas</li>
-</ul>`,
+  <li><strong>print()</strong> = "Escreva na tela" (como anotar o passo a passo)</li>
+  <li><strong>Parênteses ()</strong> = "Os ingredientes" (o que você quer mostrar)</li>
+  <li><strong>Aspas ""</strong> = "Aspas do texto" (o que está sendo dito)</li>
+</ul>
+
+<h3>📊 Anatomy de um comando print()</h3>
+<table>
+  <tr><th>Parte</th><th>Exemplo</th><th>Função</th></tr>
+  <tr><td><strong>Comando</strong></td><td><code>print</code></td><td>Diz "mostre na tela"</td></tr>
+  <tr><td><strong>Parênteses</strong></td><td><code>()</code></td><td>Envelopa o que será mostrado</td></tr>
+  <tr><td><strong>Aspas</strong></td><td><code>""</code> ou <code>''</code></td><td>Delimitam o texto</td></tr>
+  <tr><td><strong>Conteúdo</strong></td><td><code>"Olá"</code></td><td>O que aparecerá na tela</td></tr>
+</table>
+
+<h3>🔍 Passo a passo: Seu primeiro programa</h3>
+<ol>
+  <li><strong>Abra o editor</strong> (VS Code, PyCharm, ou online como Replit)</li>
+  <li><strong>Digite:</strong> <code>print("Olá, Mundo!")</code></li>
+  <li><strong>Execute:</strong> Aperte F5 ou clique em "Run"</li>
+  <li><strong>Veja o resultado:</strong> Aparecerá "Olá, Mundo!" na tela!</li>
+</ol>
+
+<h3>⚠️ Erros que todo iniciante comete</h3>
+<ul>
+  <li><strong>Esquecer os parênteses:</strong> <code>print "Olá"</code> → ERRO! Sempre use <code>print("Olá")</code></li>
+  <li><strong>Usar aspas duplas no Python 3:</strong> <code>print('Olá')</code> ou <code>print("Olá")</code> — ambos funcionam!</li>
+  <li><strong>Confundir maiúsculas:</strong> <code>Print()</code> não existe! Use <code>print()</code> minúsculo</li>
+  <li><strong>Esquecer o ponto e vírgula:</strong> Python NÃO precisa de <code>;</code> no final</li>
+</ul>
+
+<h3>🎯 Resumo Rápido</h3>
+<p><strong>print()</strong> = mostra texto na tela. Lembre: <code>print("seu texto aqui")</code>. É como "escrever" no caderno do computador!</p>`,
           exercises: [
             {
               type: "multiple-choice",
@@ -64,17 +94,54 @@ const COURSE_DATA = {
           id: "m1-l2",
           title: "Variáveis",
           theory: `<h2>Armazenando Dados</h2>
-<p>Variáveis são como caixas onde guardamos informações:</p>
-<pre>nome = "Ana"
-idade = 25
-altura = 1.65</pre>
-<p>Regras para nomes de variáveis:</p>
+
+<h3>📦 O que são variáveis?</h3>
+<p>Variáveis são como <strong>caixas etiquetadas</strong> onde guardamos informações! Assim como você coloca rótulos em caixas para saber o que tem dentro, uma variável tem um <strong>nome</strong> e guarda um <strong>valor</strong>.</p>
+
+<h3>💡 Analogia: Variáveis como "caixas do armazém"</h3>
+<p>Pense em um <strong>armazém de supermercado</strong>:</p>
 <ul>
-<li>Começa com letra ou underline</li>
-<li>Não pode ter espaço</li>
-<li>Não pode ser palavra reservada (if, for, etc.)</li>
-<li>Sensível a maiúsculas: <code>Nome</code> ≠ <code>nome</code></li>
-</ul>`,
+  <li><strong>Caixa "nome":</strong> Guarda o texto "Ana" (como uma caixa de cereal)</li>
+  <li><strong>Caixa "idade":</strong> Guarda o número 25 (como uma caixa de leite)</li>
+  <li><strong>Caixa "altura":</strong> Guarda 1.65 (como uma caixa de achocolatado)</li>
+</ul>
+
+<h3>📊 Tabela de Variáveis</h3>
+<table>
+  <tr><th>Variável</th><th>Valor</th><th>Tipo</th><th>Exemplo real</th></tr>
+  <tr><td><code>nome</code></td><td><code>"Ana"</code></td><td>String (texto)</td><td>Nome do aluno</td></tr>
+  <tr><td><code>idade</code></td><td><code>25</code></td><td>Int (inteiro)</td><td>Idade em anos</td></tr>
+  <tr><td><code>altura</code></td><td><code>1.65</code></td><td>Float (decimal)</td><td>Altura em metros</td></tr>
+  <tr><td><code>estudando</code></td><td><code>True</code></td><td>Boolean (verdadeiro/falso)</td><td>Se está estudando</td></tr>
+</table>
+
+<h3>📏 Regras para nomes de variáveis</h3>
+<table>
+  <tr><th>Regra</th><th>Correto ✅</th><th>Errado ❌</th></tr>
+  <tr><td>Começa com letra ou _</td><td><code>nome</code>, <code>_idade</code></td><td><code>2nome</code>, <code>-nome</code></td></tr>
+  <tr><td>Sem espaços</td><td><code>meu_nome</code></td><td><code>meu nome</code></td></tr>
+  <tr><td>Não é palavra reservada</td><td><code>nome_usuario</code></td><td><code>if</code>, <code>for</code></td></tr>
+  <tr><td>Sensível a maiúsculas</td><td><code>Nome</code> ≠ <code>nome</code></td><td><code>Nome</code> = <code>nome</code></td></tr>
+</table>
+
+<h3>🔍 Passo a passo: Criar e usar uma variável</h3>
+<ol>
+  <li><strong>Crie a variável:</strong> <code>nome = "Ana"</code> (atribui o valor)</li>
+  <li><strong>Use a variável:</strong> <code>print(nome)</code> (mostra o valor)</li>
+  <li><strong>Altere o valor:</strong> <code>nome = "João"</code> (sobrescreve)</li>
+  <li><strong>Veja a mudança:</strong> <code>print(nome)</code> → "João"</li>
+</ol>
+
+<h3>⚠️ Erros que todo iniciante comete</h3>
+<ul>
+  <li><strong>Usar nome errado:</strong> <code>2nome = "Ana"</code> → ERRO! Comece com letra</li>
+  <li><strong>Esquecer aspas no texto:</strong> <code>nome = Ana</code> → ERRO! Use <code>nome = "Ana"</code></li>
+  <li><strong>Confundir maiúsculas:</strong> <code>Nome</code> e <code>nome</code> são variáveis DIFERENTES!</li>
+  <li><strong>Não usar underscore:</strong> <code>meu nome</code> → ERRO! Use <code>meu_nome</code></li>
+</ul>
+
+<h3>🎯 Resumo Rápido</h3>
+<p><strong>Variáveis</strong> = caixas etiquetadas. Use <code>nome = valor</code> para criar. Lembre: sem espaços, comece com letra, sensível a maiúsculas!</p>`,
           exercises: [
             {
               type: "multiple-choice",
@@ -117,17 +184,60 @@ altura = 1.65</pre>
           id: "m1-l3",
           title: "Tipos de Dados",
           theory: `<h2>Strings, Números e Booleanos</h2>
-<p>Python tem vários tipos de dados:</p>
-<pre># Strings (texto)
-nome = "Ana"
-# Integers (números inteiros)
+
+<h3>🎨 O que são tipos de dados?</h3>
+<p>Tipos de dados são como <strong>caixas de diferentes tamanhos e formatos</strong> — cada uma guardando um tipo diferente de informação! Assim como você não guarda leite em uma caixa de cereais, Python guarda textos, números e verdadeiro/falso em "containers" diferentes.</p>
+
+<h3>💡 Analogia: Tipos como "gavetas do armário"</h3>
+<p>Pense em um <strong>armário com gavetas etiquetadas</strong>:</p>
+<ul>
+  <li><strong>String (str):</strong> Gaveta de "textos" — guarda palavras, frases, nomes</li>
+  <li><strong>Integer (int):</strong> Gaveta de "números inteiros" — 1, 2, 100, -5</li>
+  <li><strong>Float:</strong> Gaveta de "números quebrados" — 1.5, 3.14, -0.5</li>
+  <li><strong>Boolean (bool):</strong> Gaveta de "sim/não" — True ou False</li>
+</ul>
+
+<h3>📊 Tabela de Tipos de Dados</h3>
+<table>
+  <tr><th>Tipo</th><th>Nome</th><th>Exemplo</th><th>Para que serve?</th></tr>
+  <tr><td><strong>String</strong></td><td><code>str</code></td><td><code>"Ana"</code>, <code>'Olá'</code></td><td>Textos, nomes, mensagens</td></tr>
+  <tr><td><strong>Integer</strong></td><td><code>int</code></td><td><code>25</code>, <code>-10</code>, <code>0</code></td><td>Idades, quantidades, contadores</td></tr>
+  <tr><td><strong>Float</strong></td><td><code>float</code></td><td><code>1.65</code>, <code>3.14</code></td><td>Alturas, preços, notas decimais</td></tr>
+  <tr><td><strong>Boolean</strong></td><td><code>bool</code></td><td><code>True</code>, <code>False</code></td><td>Respostas sim/não, condições</td></tr>
+</table>
+
+<h3>🔍 Como descobrir o tipo?</h3>
+<p>Use a função <code>type()</code> para ver qual "gaveta" Python está usando:</p>
+<pre>nome = "Ana"
+print(type(nome))  # &lt;class 'str'&gt;
+
 idade = 25
-# Floats (números decimais)
+print(type(idade))  # &lt;class 'int'&gt;
+
 altura = 1.65
-# Booleanos (verdadeiro/falso)
-estudando = True</pre>
-<p>Use <code>type()</code> para ver o tipo:</p>
-<pre>print(type(nome))  # &lt;class 'str'&gt;</pre>`,
+print(type(altura))  # &lt;class 'float'&gt;
+
+estudando = True
+print(type(estudando))  # &lt;class 'bool'&gt;</pre>
+
+<h3>🔍 Passo a passo: Criar variáveis de cada tipo</h3>
+<ol>
+  <li><strong>String:</strong> <code>nome = "Ana"</code> (com aspas)</li>
+  <li><strong>Int:</strong> <code>idade = 25</code> (sem aspas, sem ponto)</li>
+  <li><strong>Float:</strong> <code>altura = 1.65</code> (com ponto decimal)</li>
+  <li><strong>Bool:</strong> <code>estudando = True</code> (maiúsculo!)</li>
+</ol>
+
+<h3>⚠️ Erros que todo iniciante comete</h3>
+<ul>
+  <li><strong>Confundir string com número:</strong> <code>"25"</code> é texto, <code>25</code> é número!</li>
+  <li><strong>Usar <code>true</code> minúsculo:</strong> O correto é <code>True</code> (maiúsculo!)</li>
+  <li><strong>Esquecer aspas na string:</strong> <code>nome = Ana</code> → ERRO! Use <code>nome = "Ana"</code></li>
+  <li><strong>Confundir float com int:</strong> <code>1.0</code> é float, <code>1</code> é int</li>
+</ul>
+
+<h3>🎯 Resumo Rápido</h3>
+<p><strong>Strings</strong> = textos (com aspas). <strong>Ints</strong> = inteiros. <strong>Floats</strong> = decimais. <strong>Bools</strong> = True/False. Use <code>type()</code> para descobrir o tipo!</p>`,
           exercises: [
             {
               type: "multiple-choice",
@@ -170,11 +280,53 @@ estudando = True</pre>
           id: "m1-l4",
           title: "Entrada de Dados",
           theory: `<h2>Lendo do Usuário</h2>
-<p>A função <code>input()</code> lê dados do teclado:</p>
-<pre>nome = input("Qual seu nome? ")
-print("Olá,", nome)</pre>
-<p><code>input()</code> sempre retorna uma string. Para converter:</p>
-<pre>idade = int(input("Sua idade: "))</pre>`,
+
+<h3>🎤 O que é input()?</h3>
+<p>A função <code>input()</code> é como um <strong>"microfone"</strong> que o programa usa para <strong>ouvir o que você digita</strong>! Ela pausa o programa, espera você digitar algo, e devolve o que foi digitado.</p>
+
+<h3>💡 Analogia: input() como "entrevistador"</h3>
+<p>Pense em um <strong>jornalista fazendo perguntas</strong>:</p>
+<ul>
+  <li><strong>Pergunta:</strong> <code>input("Qual seu nome? ")</code> — o jornalista pergunta</li>
+  <li><strong>Resposta:</strong> Você digita "Ana" — o jornalista anota</li>
+  <li><strong>Resultado:</strong> A variável <code>nome</code> guarda "Ana"</li>
+</ul>
+
+<h3>📊 Tabela: input() vs output()</h3>
+<table>
+  <tr><th>Função</th><th>O que faz</th><th>Exemplo</th><th>Resultado</th></tr>
+  <tr><td><code>input()</code></td><td>Lê do teclado</td><td><code>nome = input("Nome: ")</code></td><td>Usuário digita → variável recebe</td></tr>
+  <tr><td><code>print()</code></td><td>Mostra na tela</td><td><code>print("Olá,", nome)</code></td><td>Exibe "Olá, Ana"</td></tr>
+</table>
+
+<h3>⚠️ Cuidado: input() SEMPRE retorna string!</h3>
+<p>Mesmo que você digite um número, <code>input()</code> retorna <strong>texto</strong>:</p>
+<pre>idade = input("Sua idade: ")
+print(type(idade))  # &lt;class 'str'&gt; (não é número!)</pre>
+
+<h3>🔄 Como converter para número?</h3>
+<p>Use <code>int()</code> para inteiro ou <code>float()</code> para decimal:</p>
+<pre>idade = int(input("Sua idade: "))  # Converte para inteiro
+altura = float(input("Sua altura: "))  # Converte para decimal</pre>
+
+<h3>🔍 Passo a passo: Ler dados do usuário</h3>
+<ol>
+  <li><strong>Faça a pergunta:</strong> <code>nome = input("Qual seu nome? ")</code></li>
+  <li><strong>Guarde a resposta:</strong> A variável <code>nome</code> recebe o que foi digitado</li>
+  <li><strong>Use o valor:</strong> <code>print("Olá,", nome)</code></li>
+  <li><strong>Se for número:</strong> <code>idade = int(input("Idade: "))</code></li>
+</ol>
+
+<h3>⚠️ Erros que todo iniciante comete</h3>
+<ul>
+  <li><strong>Esquecer de converter:</strong> <code>idade = input()</code> → idade é string, não número!</li>
+  <li><strong>Usar int() em texto:</strong> <code>int("Ana")</code> → ERRO! Só funciona com números</li>
+  <li><strong>Esquecer a mensagem:</strong> <code>input()</code> funciona, mas <code>input("Nome: ")</code> é mais amigável</li>
+  <li><strong>Não tratar erros:</strong> Se o usuário digitar "abc" em <code>int(input())</code>, o programa quebra!</li>
+</ul>
+
+<h3>🎯 Resumo Rápido</h3>
+<p><strong>input()</strong> = lê do teclado (sempre retorna string). <strong>print()</strong> = mostra na tela. Para números, use <code>int()</code> ou <code>float()</code> para converter!</p>`,
           exercises: [
             {
               type: "multiple-choice",
@@ -222,16 +374,48 @@ print("Olá,", nome)</pre>
           id: "m2-l1",
           title: "Operadores Aritméticos",
           theory: `<h2>Fazendo Contas</h2>
-<pre>a = 10
-b = 3
 
-print(a + b)   # 13 (soma)
-print(a - b)   # 7 (subtração)
-print(a * b)   # 30 (multiplicação)
-print(a / b)   # 3.333... (divisão)
-print(a // b)  # 3 (divisão inteira)
-print(a % b)   # 1 (resto)
-print(a ** b)  # 1000 (potência)</pre>`,
+<h3>🔢 O que são operadores aritméticos?</h3>
+<p>Operadores aritméticos são como <strong>"símbolos matemáticos"</strong> do Python — eles fazem contas pra você! Assim como uma calculadora, você pode somar, subtrair, multiplicar e muito mais.</p>
+
+<h3>💡 Analogia: Operadores como "botões da calculadora"</h3>
+<p>Pense em uma <strong>calculadora</strong>:</p>
+<ul>
+  <li><strong>+</strong> = botão de soma</li>
+  <li><strong>-</strong> = botão de subtração</li>
+  <li><strong>*</strong> = botão de multiplicação (×)</li>
+  <li><strong>/</strong> = botão de divisão (÷)</li>
+</ul>
+
+<h3>📊 Tabela de Operadores Aritméticos</h3>
+<table>
+  <tr><th>Operador</th><th>Nome</th><th>Exemplo</th><th>Resultado</th><th>Explicação</th></tr>
+  <tr><td><code>+</code></td><td>Soma</td><td><code>10 + 3</code></td><td><code>13</code></td><td>Soma os dois valores</td></tr>
+  <tr><td><code>-</code></td><td>Subtração</td><td><code>10 - 3</code></td><td><code>7</code></td><td>Subtrai o segundo do primeiro</td></tr>
+  <tr><td><code>*</code></td><td>Multiplicação</td><td><code>10 * 3</code></td><td><code>30</code></td><td>Multiplica os dois valores</td></tr>
+  <tr><td><code>/</code></td><td>Divisão</td><td><code>10 / 3</code></td><td><code>3.333...</code></td><td>Divide (sempre retorna float)</td></tr>
+  <tr><td><code>//</code></td><td>Divisão Inteira</td><td><code>10 // 3</code></td><td><code>3</code></td><td>Divide e arredonda para baixo</td></tr>
+  <tr><td><code>%</code></td><td>Módulo (resto)</td><td><code>10 % 3</code></td><td><code>1</code></td><td>Retorna o resto da divisão</td></tr>
+  <tr><td><code>**</code></td><td>Potência</td><td><code>10 ** 3</code></td><td><code>1000</code></td><td>Eleva à potência</td></tr>
+</table>
+
+<h3>🔍 Passo a passo: Usar operadores</h3>
+<ol>
+  <li><strong>Crie variáveis:</strong> <code>a = 10</code>, <code>b = 3</code></li>
+  <li><strong>Faça a conta:</strong> <code>print(a + b)</code> → 13</li>
+  <li><strong>Explore outros:</strong> <code>a // b</code> (divisão inteira), <code>a ** b</code> (potência)</li>
+</ol>
+
+<h3>⚠️ Erros que todo iniciante comete</h3>
+<ul>
+  <li><strong>Confundir / com //</strong>: <code>10 / 3 = 3.333</code> (float), <code>10 // 3 = 3</code> (inteiro)</li>
+  <li><strong>Esquecer que / retorna float:</strong> <code>10 / 2 = 5.0</code> (não 5!)</li>
+  <li><strong>Usar x para multiplicar:</strong> Use <code>*</code> (asterisco), não <code>x</code></li>
+  <li><strong>Não usar parênteses:</strong> <code>2 + 3 * 4 = 14</code>, mas <code>(2 + 3) * 4 = 20</code></li>
+</ul>
+
+<h3>🎯 Resumo Rápido</h3>
+<p><strong>+</strong> soma, <strong>-</strong> subtrai, <strong>*</strong> multiplica, <strong>/</strong> divide (float), <strong>//</strong> divide (inteiro), <strong>%</strong> retorna resto, <strong>**</strong> potência.</p>`,
           exercises: [
             {
               type: "multiple-choice",
@@ -274,15 +458,47 @@ print(a ** b)  # 1000 (potência)</pre>`,
           id: "m2-l2",
           title: "Operadores de Comparação",
           theory: `<h2>Comparando Valores</h2>
-<pre>a = 5
-b = 10
 
-print(a == b)  # False (igual?)
-print(a != b)  # True (diferente?)
-print(a > b)   # False (maior?)
-print(a < b)   # True (menor?)
-print(a >= 5)  # True (maior ou igual?)
-print(a <= 3)  # False (menor ou igual?)</pre>`,
+<h3>⚖️ O que são operadores de comparação?</h3>
+<p>Operadores de comparação são como <strong>"juízes"</strong> — eles examinam dois valores e decidem se a afirmação é <strong>verdadeira (True)</strong> ou <strong>falsa (False)</strong>!</p>
+
+<h3>💡 Analogia: Comparadores como "árbitros de futebol"</h3>
+<p>Pense em um <strong>árbitro comparando placar</strong>:</p>
+<ul>
+  <li><strong>==</strong> (igual?) = "O placar é o mesmo?"</li>
+  <li><strong>!=</strong> (diferente?) = "Os placares são diferentes?"</li>
+  <li><strong>></strong> (maior?) = "O primeiro time fez mais gols?"</li>
+  <li><strong><</strong> (menor?) = "O primeiro time fez menos gols?"</li>
+</ul>
+
+<h3>📊 Tabela de Operadores de Comparação</h3>
+<table>
+  <tr><th>Operador</th><th>Significado</th><th>Exemplo</th><th>Resultado</th></tr>
+  <tr><td><code>==</code></td><td>Igual a</td><td><code>5 == 5</code></td><td><code>True</code></td></tr>
+  <tr><td><code>!=</code></td><td>Diferente de</td><td><code>5 != 3</code></td><td><code>True</code></td></tr>
+  <tr><td><code>></code></td><td>Maior que</td><td><code>5 > 3</code></td><td><code>True</code></td></tr>
+  <tr><td><code><</code></td><td>Menor que</td><td><code>5 < 3</code></td><td><code>False</code></td></tr>
+  <tr><td><code>>=</code></td><td>Maior ou igual a</td><td><code>5 >= 5</code></td><td><code>True</code></td></tr>
+  <tr><td><code><=</code></td><td>Menor ou igual a</td><td><code>5 <= 3</code></td><td><code>False</code></td></tr>
+</table>
+
+<h3>🔍 Passo a passo: Comparar valores</h3>
+<ol>
+  <li><strong>Defina os valores:</strong> <code>a = 5</code>, <code>b = 10</code></li>
+  <li><strong>Compare:</strong> <code>print(a == b)</code> → False (5 não é igual a 10)</li>
+  <li><strong>Experimente:</strong> <code>print(a < b)</code> → True (5 é menor que 10)</li>
+</ol>
+
+<h3>⚠️ Erros que todo iniciante comete</h3>
+<ul>
+  <li><strong>Confundir = com ==:</strong> <code>=</code> atribui valor, <code>==</code> compara!</li>
+  <li><strong>Usar == em strings:</strong> <code>"Ana" == "ana"</code> → False (maiúsculas diferentes!)</li>
+  <li><strong>Esquecer que retorna bool:</strong> Comparação retorna True/False, não números!</li>
+  <li><strong>Não usar parênteses:</strong> <code>print(5 > 3)</code> funciona, mas <code>print 5 > 3</code> não!</li>
+</ul>
+
+<h3>🎯 Resumo Rápido</h3>
+<p><strong>==</strong> igual, <strong>!=</strong> diferente, <strong>></strong> maior, <strong><</strong> menor, <strong>>=</strong> maior/igual, <strong><=</strong> menor/igual. Retornam sempre True ou False!</p>`,
           exercises: [
             {
               type: "multiple-choice",
@@ -318,17 +534,44 @@ print(a <= 3)  # False (menor ou igual?)</pre>`,
           id: "m2-l3",
           title: "Operadores Lógicos",
           theory: `<h2>Combinando Condições</h2>
-<pre>a = 5
-b = 10
 
-# AND - ambos verdadeiros
-print(a > 0 and b > 0)  # True
+<h3>🔗 O que são operadores lógicos?</h3>
+<p>Operadores lógicos são como <strong>"combinadores de condições"</strong> — eles permitem que você junte várias comparações em uma única pergunta!</p>
 
-# OR - pelo menos um verdadeiro
-print(a > 10 or b > 5)   # True
+<h3>💡 Analogia: Lógicos como "regras de seleção"</h3>
+<p>Pense em um <strong>processo seletivo de emprego</strong>:</p>
+<ul>
+  <li><strong>AND (e):</strong> "Precisa ter diploma E experiência" — AMBOS são obrigatórios</li>
+  <li><strong>OR (ou):</strong> "Falar inglês OU espanhol" — PELO MENOS UM basta</li>
+  <li><strong>NOT (não):</strong> "NÃO pode ser menor de idade" — inverte a condição</li>
+</ul>
 
-# NOT - inverte o valor
-print(not (a > 10))      # True</pre>`,
+<h3>📊 Tabela de Operadores Lógicos</h3>
+<table>
+  <tr><th>Operador</th><th>Significado</th><th>Regra</th><th>Exemplo</th><th>Resultado</th></tr>
+  <tr><td><code>and</code></td><td>E</td><td>AMBOS devem ser True</td><td><code>True and False</code></td><td><code>False</code></td></tr>
+  <tr><td><code>or</code></td><td>Ou</td><td>PELO MENOS UM deve ser True</td><td><code>True or False</code></td><td><code>True</code></td></tr>
+  <tr><td><code>not</code></td><td>Não</td><td>Inverte o valor</td><td><code>not True</code></td><td><code>False</code></td></tr>
+</table>
+
+<h3>🔍 Passo a passo: Usar operadores lógicos</h3>
+<ol>
+  <li><strong>Defina variáveis:</strong> <code>idade = 25</code>, <code>experiencia = 3</code></li>
+  <li><strong>Use AND:</strong> <code>print(idade > 18 and experiencia > 0)</code> → True</li>
+  <li><strong>Use OR:</strong> <code>print(idade > 30 or experiencia > 5)</code> → False</li>
+  <li><strong>Use NOT:</strong> <code>print(not (idade < 18))</code> → True</li>
+</ol>
+
+<h3>⚠️ Erros que todo iniciante comete</h3>
+<ul>
+  <li><strong>Usar & ou |:</strong> Use <code>and</code> e <code>or</code> (palavras), não <code>&</code> e <code>|</code> (símbolos)</li>
+  <li><strong>Confundir not com !=:</strong> <code>not</code> inverte booleano, <code>!=</code> compara valores</li>
+  <li><strong>Não usar parênteses:</strong> <code>not a > 10</code> pode confundir — use <code>not (a > 10)</code></li>
+  <li><strong>Esquecer a ordem:</strong> Python avalia AND antes de OR (como matemática)</li>
+</ul>
+
+<h3>🎯 Resumo Rápido</h3>
+<p><strong>and</strong> = ambos precisam ser True. <strong>or</strong> = pelo menos um True. <strong>not</strong> = inverte o valor. Combine para criar condições complexas!</p>`,
           exercises: [
             {
               type: "multiple-choice",
@@ -373,13 +616,45 @@ print(not (a > 10))      # True</pre>`,
           id: "m3-l1",
           title: "Condicionais if/else",
           theory: `<h2>Tomando Decisões</h2>
-<pre>idade = 18
 
-if idade >= 18:
-    print("Maior de idade")
-else:
-    print("Menor de idade")</pre>
-<p>Importante: use <code>:</code> no final e <code>indentação</code> (4 espaços) para o bloco.</p>`,
+<h3>🔀 O que é if/else?</h3>
+<p>If/else é como um <strong>"semáforo lógico"</strong> — o programa toma decisões baseado em condições! Assim como um semáforo muda de cor dependendo da situação, o Python executa código diferente dependendo da condição.</p>
+
+<h3>💡 Analogia: if/else como "portão eletrônico"</h3>
+<p>Pense em um <strong>portão de estacionamento</strong>:</p>
+<ul>
+  <li><strong>if (se):</strong> "SE você tiver crachá, pode entrar"</li>
+  <li><strong>else (senão):</strong> "SENÃO, volte pela entrada principal"</li>
+</ul>
+
+<h3>📊 Tabela: Estrutura if/else</h3>
+<table>
+  <tr><th>Parte</th><th>Exemplo</th><th>O que faz</th></tr>
+  <tr><td><strong>if</strong></td><td><code>if idade >= 18:</code></td><td>Testa a condição</td></tr>
+  <tr><td><strong>Bloco if</strong></td><td><code>    print("Maior")</code></td><td>Executa se True</td></tr>
+  <tr><td><strong>else</strong></td><td><code>else:</code></td><td>Caso contrário</td></tr>
+  <tr><td><strong>Bloco else</strong></td><td><code>    print("Menor")</code></td><td>Executa se False</td></tr>
+</table>
+
+<h3>🔍 Passo a passo: Criar um if/else</h3>
+<ol>
+  <li><strong>Escreva a condição:</strong> <code>if idade >= 18:</code></li>
+  <li><strong>Indentação:</strong> 4 espaços (ou 1 tab) para o bloco</li>
+  <li><strong>Ação se True:</strong> <code>    print("Pode votar")</code></li>
+  <li><strong>else:</strong> <code>else:</code></li>
+  <li><strong>Ação se False:</strong> <code>    print("Não pode votar")</code></li>
+</ol>
+
+<h3>⚠️ Erros que todo iniciante comete</h3>
+<ul>
+  <li><strong>Esquecer os dois-pontos:</strong> <code>if idade >= 18</code> → ERRO! Use <code>if idade >= 18:</code></li>
+  <li><strong>Não indentar:</strong> <code>print()</code> precisa estar indentado (4 espaços)</li>
+  <li><strong>Usar indentação errada:</strong> Misturar tabs e espaços causa erro!</li>
+  <li><strong>Confundir = com ==:</strong> <code>if idade = 18:</code> → ERRO! Use <code>==</code> para comparar</li>
+</ul>
+
+<h3>🎯 Resumo Rápido</h3>
+<p><strong>if</strong> testa condição. <strong>else</strong> é o "senão". Lembre: <code>:</code> no final e <strong>indentação</strong> no bloco!</p>`,
           exercises: [
             {
               type: "multiple-choice",
@@ -415,17 +690,46 @@ else:
           id: "m3-l2",
           title: "Múltiplas Condições (elif)",
           theory: `<h2>Várias Opções</h2>
-<pre>nota = 85
 
-if nota >= 90:
-    print("A")
-elif nota >= 80:
-    print("B")
-elif nota >= 70:
-    print("C")
-else:
-    print("F")</pre>
-<p><code>elif</code> = "senão se" — testa múltiplas condições.</p>`,
+<h3>🔀 O que é elif?</h3>
+<p><code>elif</code> é como um <strong>"semáforo com várias cores"</strong> — testa múltiplas condições em sequência! É a abreviação de "else if" (senão se).</p>
+
+<h3>💡 Analogia: elif como "menu de restaurante"</h3>
+<p>Pense em um <strong>cardápio</strong>:</p>
+<ul>
+  <li><strong>if:</strong> "SE quiser o prato do dia..." (testa primeira opção)</li>
+  <li><strong>elif:</strong> "SENÃO SE quiser a pizza..." (testa segunda opção)</li>
+  <li><strong>elif:</strong> "SENÃO SE quiser o hambúrguer..." (testa terceira opção)</li>
+  <li><strong>else:</strong> "SENÃO, tenha uma salada" (opção padrão)</li>
+</ul>
+
+<h3>📊 Tabela: Estrutura if/elif/else</h3>
+<table>
+  <tr><th>Parte</th><th>Exemplo</th><th>O que faz</th></tr>
+  <tr><td><strong>if</strong></td><td><code>if nota >= 90:</code></td><td>Testa primeira condição</td></tr>
+  <tr><td><strong>elif</strong></td><td><code>elif nota >= 80:</code></td><td>Testa segunda condição</td></tr>
+  <tr><td><strong>elif</strong></td><td><code>elif nota >= 70:</code></td><td>Testa terceira condição</td></tr>
+  <tr><td><strong>else</strong></td><td><code>else:</code></td><td>Opção padrão (nenhuma anterior)</td></tr>
+</table>
+
+<h3>🔍 Passo a passo: Usar elif</h3>
+<ol>
+  <li><strong>Primeira condição:</strong> <code>if nota >= 90:</code> → nota A</li>
+  <li><strong>Segunda condição:</strong> <code>elif nota >= 80:</code> → nota B</li>
+  <li><strong>Terceira condição:</strong> <code>elif nota >= 70:</code> → nota C</li>
+  <li><strong>Padrão:</strong> <code>else:</code> → nota F</li>
+</ol>
+
+<h3>⚠️ Erros que todo iniciante comete</h3>
+<ul>
+  <li><strong>Usar else if:</strong> O correto é <code>elif</code> (não <code>else if</code>)</li>
+  <li><strong>Não usar else:</strong> Sempre tenha um <code>else</code> para o caso padrão</li>
+  <li><strong>Ordem errada:</strong> Condições mais específicas primeiro! (90+ antes de 80+)</li>
+  <li><strong>Esquecer os dois-pontos:</strong> Todo <code>if</code> e <code>elif</code> precisa de <code>:</code></li>
+</ul>
+
+<h3>🎯 Resumo Rápido</h3>
+<p><strong>elif</strong> = "senão se" — testa múltiplas condições. Python executa o <strong>primeiro True</strong> e para. Sempre tenha um <code>else</code> no final!</p>`,
           exercises: [
             {
               type: "multiple-choice",
@@ -461,12 +765,35 @@ else:
           id: "m3-l3",
           title: "Loops com while",
           theory: `<h2>Repetindo com while</h2>
-<pre>contagem = 1
-while contagem <= 5:
-    print(contagem)
-    contagem += 1</pre>
-<p><code>while</code> repete ENQUanto a condição for True.</p>
-<p>Cuidado com loops infinitos!</p>`,
+
+<h3>🔄 O que é um loop while?</h3>
+<p>Um loop <code>while</code> é como um <strong>"carrossel lógico"</strong> — ele repete algo <strong>ENQUANTO</strong> uma condição for verdadeira!</p>
+
+<h3>💡 Analogia: while como "moinho de água"</h3>
+<p>Pense em um <strong>moinho movido a água</strong>:</p>
+<ul>
+  <li><strong>Condição:</strong> "ENQUANTO houver água fluindo..."</li>
+  <li><strong>Ação:</strong> "...o moinho gira e moe o grão"</li>
+  <li><strong>Parada:</strong> "QUANDO a água parar, o moinho para"</li>
+</ul>
+
+<h3>📊 Estrutura do while</h3>
+<table>
+  <tr><th>Parte</th><th>Exemplo</th><th>O que faz</th></tr>
+  <tr><td><strong>Inicialização</strong></td><td><code>contagem = 1</code></td><td>Começa o contador</td></tr>
+  <tr><td><strong>while</strong></td><td><code>while contagem <= 5:</code></td><td>Testa a condição</td></tr>
+  <tr><td><strong>Bloco</strong></td><td><code>    print(contagem)</code></td><td>Executa o código</td></tr>
+  <tr><td><strong>Incremento</strong></td><td><code>    contagem += 1</code></td><td>Avança o contador</td></tr>
+</table>
+
+<h3>⚠️ Cuidado: Loops Infinitos!</h3>
+<p>Se a condição <strong>sempre for True</strong>, o loop nunca para! É como um moinho que gira para sempre...</p>
+<pre># CUIDADO! Loop infinito!
+while True:
+    print("Para sempre!")</pre>
+
+<h3>🎯 Resumo Rápido</h3>
+<p><strong>while</strong> = repete ENQUANTO True. Sempre inicialize o contador e incremento dentro do bloco!</p>`,
           exercises: [
             {
               type: "multiple-choice",
