@@ -832,18 +832,55 @@ while True:
           id: "m3-l4",
           title: "Loops com for",
           theory: `<h2>Iterando com for</h2>
-<pre># Com range
-for i in range(5):
-    print(i)  # 0, 1, 2, 3, 4
 
-# Em uma lista
-frutas = ["maçã", "banana", "laranja"]
-for fruta in frutas:
-    print(fruta)
+<h3>🔄 O que é um loop for?</h3>
+<p>Um loop <code>for</code> é como um <strong>"guia turístico"</strong> — ele visita cada elemento de uma coleção, um por um! Enquanto o <code>while</code> repete "ENQUANTO" uma condição for verdadeira, o <code>for</code> repete "PARA CADA" elemento.</p>
 
-# Com range(inicio, fim, passo)
-for i in range(1, 10, 2):
-    print(i)  # 1, 3, 5, 7, 9</pre>`,
+<h3>💡 Analogia: for como "passeio em grupo"</h3>
+<p>Pense em um <strong>grupo de amigos visitando museus</strong>:</p>
+<ul>
+  <li><strong>Coleção:</strong> A lista de museus a visitar</li>
+  <li><strong>Variável:</strong> O guia que muda a cada museu</li>
+  <li><strong>Ação:</strong> Em cada museu, o grupo faz algo (imprime, processa)</li>
+</ul>
+
+<h3>📊 Estrutura do for</h3>
+<table>
+  <tr><th>Parte</th><th>Exemplo</th><th>O que faz</th></tr>
+  <tr><td><strong>for</strong></td><td><code>for i in range(5):</code></td><td>Inicia o loop</td></tr>
+  <tr><td><strong>Variável</strong></td><td><code>i</code></td><td>Recebe cada valor</td></tr>
+  <tr><td><strong>in</strong></td><td><code>in</code></td><td>"em" ou "de"</td></tr>
+  <tr><td><strong>Coleção</strong></td><td><code>range(5)</code></td><td>O que será percorrido</td></tr>
+  <tr><td><strong>Bloco</strong></td><td><code>    print(i)</code></td><td>O que faz em cada item</td></tr>
+</table>
+
+<h3>🔍 range(): O gerador de números</h3>
+<p><code>range()</code> gera sequências de números:</p>
+<table>
+  <tr><th>Uso</th><th>Exemplo</th><th>Resultado</th></tr>
+  <tr><td><code>range(n)</code></td><td><code>range(5)</code></td><td>0, 1, 2, 3, 4</td></tr>
+  <tr><td><code>range(início, fim)</code></td><td><code>range(2, 6)</code></td><td>2, 3, 4, 5</td></tr>
+  <tr><td><code>range(início, fim, passo)</code></td><td><code>range(1, 10, 2)</code></td><td>1, 3, 5, 7, 9</td></tr>
+</table>
+
+<h3>🔍 Passo a passo: Usar for</h3>
+<ol>
+  <li><strong>Defina a coleção:</strong> <code>frutas = ["maçã", "banana", "laranja"]</code></li>
+  <li><strong>Crie o loop:</strong> <code>for fruta in frutas:</code></li>
+  <li><strong>Use a variável:</strong> <code>    print(fruta)</code></li>
+  <li><strong>Explore range:</strong> <code>for i in range(10):</code></li>
+</ol>
+
+<h3>⚠️ Erros que todo iniciante comete</h3>
+<ul>
+  <li><strong>range(5) vai de 0 a 4:</strong> NÃO de 1 a 5! Começa no zero</li>
+  <li><strong>Esquecer o in:</strong> <code>for i range(5):</code> → ERRO! Use <code>for i in range(5):</code></li>
+  <li><strong>Não indentar:</strong> O bloco do loop precisa estar indentado</li>
+  <li><strong>Modificar a coleção durante o loop:</strong> Pode causar comportamento inesperado</li>
+</ul>
+
+<h3>🎯 Resumo Rápido</h3>
+<p><strong>for</strong> = para cada item. <strong>range(n)</strong> = de 0 a n-1. <strong>range(início, fim, passo)</strong> = sequência personalizada. Lembre: começa em 0!</p>`,
           exercises: [
             {
               type: "multiple-choice",
@@ -891,16 +928,49 @@ for i in range(1, 10, 2):
           id: "m4-l1",
           title: "Métodos de String",
           theory: `<h2>Manipulando Texto</h2>
-<pre>nome = "  Python  "
 
-print(nome.upper())      # PYTHON
-print(nome.lower())      # python
-print(nome.strip())      # Python (remove espaços)
-print(nome.strip().lower()) # python
+<h3>🔧 O que são métodos de string?</h3>
+<p>Métodos de string são como <strong>"ferramentas de um encanador"</strong> — cada um faz um serviço específico no texto! Assim como um encanador tem chaves, alicates e selantes, Python tem métodos para transformar, limpar e manipular texto.</p>
 
-frase = "Aprender Python"
-print(frase.replace("Python", "código"))  # Aprender código
-print(len(frase))  # 15</pre>`,
+<h3>💡 Analogia: Métodos como "trabalho de costura"</h3>
+<p>Pense em uma <strong>costureira trabalhando com tecido</strong>:</p>
+<ul>
+  <li><strong>upper():</strong> "Pinte todas as letras de preto" (maiúsculas)</li>
+  <li><strong>lower():</strong> "Use o tecido claro" (minúsculas)</li>
+  <li><strong>strip():</strong> "Recorte as bordas extras" (espaços)</li>
+  <li><strong>replace():</strong> "Troque o estampo" (substituir)</li>
+</ul>
+
+<h3>📊 Tabela de Métodos de String</h3>
+<table>
+  <tr><th>Método</th><th>O que faz</th><th>Exemplo</th><th>Resultado</th></tr>
+  <tr><td><code>.upper()</code></td><td>Converte para maiúsculas</td><td><code>"oi".upper()</code></td><td><code>"OI"</code></td></tr>
+  <tr><td><code>.lower()</code></td><td>Converte para minúsculas</td><td><code>"OI".lower()</code></td><td><code>"oi"</code></td></tr>
+  <tr><td><code>.strip()</code></td><td>Remove espaços das bordas</td><td><code>" oi ".strip()</code></td><td><code>"oi"</code></td></tr>
+  <tr><td><code>.replace(a, b)</code></td><td>Substitui texto</td><td><code>"oi".replace("i", "a")</code></td><td><code>"oa"</code></td></tr>
+  <tr><td><code>len()</code></td><td>Contém caracteres</td><td><code>len("oi")</code></td><td><code>2</code></td></tr>
+  <tr><td><code>.split()</code></td><td>Divide em lista</td><td><code>"a b c".split()</code></td><td><code>["a", "b", "c"]</code></td></tr>
+  <tr><td><code>.join()</code></td><td>Junta lista em string</td><td><code>"-".join(["a","b"])</code></td><td><code>"a-b"</code></td></tr>
+</table>
+
+<h3>🔍 Passo a passo: Usar métodos</h3>
+<ol>
+  <li><strong>Crie a string:</strong> <code>nome = "  Python  "</code></li>
+  <li><strong>Encadeie métodos:</strong> <code>print(nome.strip().lower())</code></li>
+  <li><strong>Use replace:</strong> <code>print(nome.replace("Python", "código"))</code></li>
+  <li><strong>Meça o tamanho:</strong> <code>print(len(nome))</code></li>
+</ol>
+
+<h3>⚠️ Erros que todo iniciante comete</h3>
+<ul>
+  <li><strong>Esquecer que strings são imutáveis:</strong> <code>nome.upper()</code> NÃO altera <code>nome</code> — retorna nova string</li>
+  <li><strong>Não atribuir o resultado:</strong> <code>nome.strip()</code> faz nada se não salvar!</li>
+  <li><strong>Confundir len() com método:</strong> <code>len()</code> é função, não método (não usa <code>.</code>)</li>
+  <li><strong>Usar replace errado:</strong> <code>replace()</code> precisa de DOIS argumentos</li>
+</ul>
+
+<h3>🎯 Resumo Rápido</h3>
+<p><strong>.upper()</strong> = maiúsculas, <strong>.lower()</strong> = minúsculas, <strong>.strip()</strong> = remove espaços, <strong>.replace()</strong> = troca texto. Strings são imutáveis — métodos retornam nova string!</p>`,
           exercises: [
             {
               type: "multiple-choice",
@@ -936,18 +1006,53 @@ print(len(frase))  # 15</pre>`,
           id: "m4-l2",
           title: "F-strings e Formatação",
           theory: `<h2>Formatando Texto</h2>
-<pre>nome = "Ana"
-idade = 25
 
-# F-string (moderno)
-print(f"Meu nome é {nome} e tenho {idade} anos")
+<h3>✨ O que são f-strings?</h3>
+<p>F-strings são como <strong>"moldes de cookie"</strong> — você cria um molde com buracos e depois enche com os ingredientes! São a forma mais moderna e fácil de colocar variáveis dentro de texto.</p>
 
-# Cálculos dentro de f-string
-print(f"Em 5 anos terei {idade + 5} anos")
+<h3>💡 Analogia: f-strings como "receita personalizada"</h3>
+<p>Pense em uma <strong>receita de bolo</strong>:</p>
+<ul>
+  <li><strong>Molde:</strong> <code>f"Bolo de {sabor} com {cobertura}"</code></li>
+  <li><strong>Ingredientes:</strong> <code>sabor = "chocolate"</code>, <code>cobertura = "creme"</code></li>
+  <li><strong>Resultado:</strong> <code>"Bolo de chocolate com creme"</code></li>
+</ul>
 
-# Formatação de números
-preco = 19.99
-print(f"Preço: R$\{preco:.2f}")  # R$19.99</pre>`,
+<h3>📊 Tabela: Formatação de Strings</h3>
+<table>
+  <tr><th>Método</th><th>Exemplo</th><th>Resultado</th><th>Uso</th></tr>
+  <tr><td><strong>F-string</strong></td><td><code>f"Olá, {nome}"</code></td><td><code>"Olá, Ana"</code></td><td>Moderno e fácil</td></tr>
+  <tr><td><strong>.format()</strong></td><td><code>"Olá, {}".format(nome)</code></td><td><code>"Olá, Ana"</code></td><td>Antigo, mas funciona</td></tr>
+  <tr><td><strong>%</strong></td><td><code>"Olá, %s" % nome</code></td><td><code>"Olá, Ana"</code></td><td>Bem antigo, evite!</td></tr>
+</table>
+
+<h3>🔢 Formatação de Números</h3>
+<table>
+  <tr><th>Formato</th><th>Exemplo</th><th>Resultado</th></tr>
+  <tr><td><code>{x:.2f}</code></td><td><code>f"{19.99:.2f}"</code></td><td><code>"19.99"</code> (2 casas decimais)</td></tr>
+  <tr><td><code>{x:.0f}</code></td><td><code>f"{19.99:.0f}"</code></td><td><code>"20"</code> (arredonda)</td></tr>
+  <tr><td><code>{x:%}</code></td><td><code>f"{0.75:%}"</code></td><td><code>"75.0000%"</code></td></tr>
+  <tr><td><code>{x:,}</code></td><td><code>f"{1000000:,}"</code></td><td><code>"1,000,000"</code></td></tr>
+</table>
+
+<h3>🔍 Passo a passo: Criar f-strings</h3>
+<ol>
+  <li><strong>Crie variáveis:</strong> <code>nome = "Ana"</code>, <code>idade = 25</code></li>
+  <li><strong>Use f-string:</strong> <code>print(f"Olá, {nome}!")</code></li>
+  <li><strong>Faça cálculos:</strong> <code>print(f"Em 5 anos: {idade + 5}")</code></li>
+  <li><strong>Formate números:</strong> <code>print(f"Preço: R${preco:.2f}")</code></li>
+</ol>
+
+<h3>⚠️ Erros que todo iniciante comete</h3>
+<ul>
+  <li><strong>Esquecer o f:</strong> <code>"{nome}"</code> → ERRO! Use <code>f"{nome}"</code></li>
+  <li><strong>Não usar chaves:</strong> <code>f"nome"</code> → mostra "nome", não o valor!</li>
+  <li><strong>Confundir aspas:</strong> <code>f"Olá, {nome}"</code> ou <code>f'Olá, {nome}'</code> — ambos funcionam</li>
+  <li><strong>Não fechar aspas:</strong> <code>f"Olá, {nome"</code> → ERRO! Feche sempre: <code>f"Olá, {nome}"</code></li>
+</ul>
+
+<h3>🎯 Resumo Rápido</h3>
+<p><strong>F-strings</strong> = <code>f"texto {variável}"</code>. Formate números com <code>{x:.2f}</code>. É a forma mais moderna e fácil de formatar texto!</p>`,
           exercises: [
             {
               type: "fill-blank",
